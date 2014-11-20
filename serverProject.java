@@ -9,18 +9,27 @@ public class serverProject implements Runnable {
 	private Thread thread = null;
 	//datainput is coming into server
 	private DataInputStream streamIn = null;
+	private final PORT = 60534;
+	private final String handshakeStart = ("HI_THERE");
+	private final String handshakeAck = ("BACK_AT_YA");
+	private String clientUsername= null;
+	private String serverUsername = null;
+	private final String badHandshake = ("ERROR BAD HANDSHAKE");
 	
-	public ChatServer(int port)
+	public FileServer(int PORT)
 	{
 		try
       { 
 	  System.out.println("Binding to port " + port + ", please wait  ...");
+	  //initializing server socket
          server = new ServerSocket(port);  
          System.out.println("Server started: " + server);
          start();
       }
       catch(IOException ioe)
       {  System.out.println(ioe); 
+		 System.out.println(badHandshake);
+		 
       }
    }
 		
