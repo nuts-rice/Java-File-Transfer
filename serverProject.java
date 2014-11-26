@@ -9,7 +9,7 @@ public class serverProject implements Runnable {
 	private Thread thread = null;
 	//datainput is coming into server
 	private DataInputStream streamIn = null;
-	private final PORT = 60534;
+	private final Int PORT = 60534;
 	private final String handshakeStart = ("HI_THERE");
 	private final String handshakeAck = ("BACK_AT_YA");
 	private String clientUsername= null;
