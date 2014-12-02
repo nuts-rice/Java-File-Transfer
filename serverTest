@@ -1,0 +1,19 @@
+package fileSharing;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class serverTest {
+
+	@Test
+	public void connectTestSuccess() {
+		server testServer0 = new server();
+	}
+	
+	
+	public void connectTestFail() {
+		fail();
+	}
+
+}
