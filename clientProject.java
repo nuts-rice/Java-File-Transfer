@@ -1,12 +1,13 @@
+package fileSharing;
 import java.net.*;
 import java.io.*;
 
-public class ChatClient
+public class client2client
 {  private Socket socket              = null;
    private DataInputStream  console   = null;
    private DataOutputStream streamOut = null;
 
-   public ChatClient(String serverName, int serverPort)
+   public	client2client(String serverName, int serverPort)
    {  System.out.println("Establishing connection. Please wait ...");
       try
       {  socket = new Socket(serverName, serverPort);
@@ -46,10 +47,10 @@ public class ChatClient
       }
    }
    public static void main(String args[])
-   {  ChatClient client = null;
+   {  client2client client = null;
       if (args.length != 2)
          System.out.println("Usage: java ChatClient host port");
       else
-         client = new ChatClient(args[0], Integer.parseInt(args[1]));
+         client = new client2client(args[0], Integer.parseInt(args[1]));
    }
 }
