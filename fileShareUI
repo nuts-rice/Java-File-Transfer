@@ -1,0 +1,7 @@
+package fileSharing;
+//choose if computer connects to you or if you connect to computer
+//send and recieve file
+//choose file to upload
+public class fileShareUI {
+
+}
