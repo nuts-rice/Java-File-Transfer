@@ -5,10 +5,18 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class serverTest {
-
+	private server testServer0;
 	@Test
 	public void connectTestSuccess() {
-		server testServer0 = new server();
+		try {
+			testServer0 = new server(null);
+			System.out.println("Server name is " + testServer0.getServerUsername());
+			System.out.println("Running on port: " + server.getPort());
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	
