@@ -1,7 +1,44 @@
 package fileSharing;
+
+import java.util.Scanner;
+
 //choose if computer connects to you or if you connect to computer
 //send and recieve file
 //choose file to upload
-public class fileShareUI {
+public class fileShareUI  {
+	static Scanner UIscanner = new Scanner (System.in);
+	
+	
+	
 
+	public static void main(String args[]) {
+	
+	System.out.println("Are you connecting to a sever or acting as server? type client/server");
+	String in = UIscanner.nextLine();
+	//user chooses to connect to server
+	if( in.equals("client") )
+			{
+				//goes into client mode
+			//initializes instance of client 
+			client2client client = new client2client(null);
+			
+			
+			}
+	
+	else if (in.equals("server"))
+			{
+			//initializes server
+			try {
+				server UIserver = new server(null);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		
+			}
+	
+	
+		
+}
 }
